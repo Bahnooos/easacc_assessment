@@ -21,7 +21,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
         title: const Text('Settings'),
         actions: [
           TextButton(
-            onPressed: () => settings.saveUrl(settings.state.currentUrl),
+            onPressed: () {
+              settings.saveUrl(settings.state.currentUrl);
+              Navigator.pushNamed(context, '/web');
+            },
             child: const Text(
               'Save',
               style: TextStyle(fontWeight: FontWeight.bold),

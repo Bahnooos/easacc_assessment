@@ -20,7 +20,7 @@ class UrlInputWidget extends StatelessWidget {
         const SizedBox(height: 8),
         TextField(
           controller: controller,
-          keyboardType: TextInputType.url,
+
           decoration: const InputDecoration(
             prefixIcon: Icon(Icons.language),
             hintText: 'https://easacc.com',

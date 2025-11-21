@@ -10,11 +10,16 @@ class PrinterHeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = context.watch<SettingsCubit>();
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         const Text(
           'PRINTER CONNECTION',
-          style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.1),
+
+          style: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 1.1,
+          ),
         ),
         TextButton.icon(
           icon: Icon(cubit.state.isScanning ? Icons.stop : Icons.search),

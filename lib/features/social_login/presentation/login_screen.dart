@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
         body: BlocConsumer<AuthCubit, AuthState>(
           listener: (context, state) {
             if (state is AuthSuccess) {
-              Navigator.of(context).pushReplacementNamed('/settings');
+              Navigator.of(context).pushReplacementNamed('/web');
             } else if (state is AuthFailure) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
